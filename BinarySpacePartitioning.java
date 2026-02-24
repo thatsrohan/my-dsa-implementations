@@ -30,7 +30,7 @@ public class BSPDungeon extends JPanel {
         }
 
         void split(Random rand) {
-            if (area.w < MIN_SIZE * 2 && area.h < MIN_SIZE * 2) return;
+            if (area.w <= MIN_SIZE * 2 && area.h <= MIN_SIZE * 2) return;
 
             boolean vertical = rand.nextBoolean();
             if (area.w > area.h) vertical = true;
@@ -120,3 +120,4 @@ public class BSPDungeon extends JPanel {
         frame.setVisible(true);
     }
 }
+
